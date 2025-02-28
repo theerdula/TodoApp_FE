@@ -78,7 +78,7 @@ export class DashboardComponent implements OnInit {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.token}`
     });
-    this.http.delete<any>(`http://localhost:8000/api/todos/deletetask/${taskId}`, { headers }).subscribe(
+    this.http.delete<any>(`https://todoapp-be-7hrs.onrender.com/api/todos/deletetask/${taskId}`, { headers }).subscribe(
       response => {
         console.log(response);
         alert(response.message)
@@ -96,7 +96,7 @@ export class DashboardComponent implements OnInit {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.token}`
     });
-    this.http.patch<any>(`http://localhost:8000/api/todos/edittask/${taskId}`, { status: true }, { headers }).subscribe(
+    this.http.patch<any>(`https://todoapp-be-7hrs.onrender.com/api/todos/edittask/${taskId}`, { status: true }, { headers }).subscribe(
       response => {
         console.log(response);
         alert(response.message)
@@ -113,7 +113,7 @@ export class DashboardComponent implements OnInit {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.token}`
     });
-    this.http.patch<any>(`http://localhost:8000/api/todos/edittask/${taskId}`, { important: true }, { headers }).subscribe(
+    this.http.patch<any>(`https://todoapp-be-7hrs.onrender.com/api/todos/edittask/${taskId}`, { important: true }, { headers }).subscribe(
       response => {
         console.log(response);
         alert(response.message)
